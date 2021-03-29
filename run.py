@@ -14,4 +14,4 @@ if __name__ == '__main__':
         model = Model.load("model_" + str(args.train) + ".pkl")
     else:
         model = Model(args.train, save=True, path="model_" + str(args.train) + ".pkl")
-    print(model.evaluate(load_data(1)))
+    print(model.evaluate(load_data(args.evaluate)))
